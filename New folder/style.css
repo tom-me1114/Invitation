@@ -1,0 +1,182 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('dfzx2fc-0928a127-ae89-4a84-91a1-af07dc121174.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Intro Screen Styled as an Envelope */
+.intro-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed; /* Make the intro screen take full space */
+    background: #F7F7F7; /* Light envelope color */
+    border: 5px solid #000; /* Black border for the envelope */
+    border-radius: 15px; /* Rounded corners for the envelope */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensure it's on top */
+}
+
+.envelope {
+    position: relative;
+    padding: 40px;
+    background: white; /* White inner envelope */
+    width: 300px; /* Fixed width for envelope */
+    text-align: center;
+    border: 2px solid #C0C0C0; /* Light gray border for inner */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Intro Title and Button */
+.intro-title {
+    font-size: 2em;
+    color: #FF0000; /* Spider-Man red */
+    margin-bottom: 20px;
+}
+
+.open-btn {
+    background-color: #FF0000; /* Spider-Man red */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-btn:hover {
+    background-color: #FFD700; /* Change to gold on hover */
+}
+
+/* Invitation card hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Container for the invitation card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Enlarged Invitation Card with transparency */
+.card {
+    width: 90%;
+    max-width: 400px; /* Max width for mobile screens */
+    background: rgba(255, 255, 255, 0.3); /* Semi-transparent background */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header, Body, and Footer styles */
+.card-header h1, .card-body p, .card-footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.card-header h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.card-body p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+/* Icons for phone and image */
+.card-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+    margin-top: 20px;
+}
+
+.card-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out, color 0.2s;
+}
+
+.card-icons i {
+    font-size: 2em; /* Adjust icon size */
+    margin-bottom: 10px;
+}
+
+.card-icons span {
+    font-size: 1em;
+}
+
+.card-icons a:hover {
+    transform: scale(1.2); /* Enlarge on hover */
+    color: #FFD700; /* Change color on hover */
+}
+
+/* Footer with additional info */
+.card-footer {
+    background-color: rgba(255, 0, 0, 0.7); /* Make footer semi-transparent */
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+
+.card-footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .envelope {
+        width: 80%; /* Responsive envelope width */
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-header h1 {
+        font-size: 2em;
+    }
+
+    .card-body p {
+        font-size: 1.1em;
+    }
+
+    .card-icons i {
+        font-size: 1.8em;
+    }
+
+    .card-icons span {
+        font-size: 0.9em;
+    }
+}

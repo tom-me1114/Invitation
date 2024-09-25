@@ -1,0 +1,218 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('dfzx2fc-0928a127-ae89-4a84-91a1-af07dc121174.gif') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+/* Black bars on the sides */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items to the start to allow for vertical space */
+    padding: 20px;
+    height: 100vh; /* Full viewport height */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+/* Black side bars for mobile appeal */
+.black-bar {
+    background-color: black;
+    width: 15%; /* Adjust width as needed */
+    min-width: 200px; /* Minimum width for aesthetic */
+}
+
+/* Wrapper for the card to center it */
+.card-wrapper {
+    width: 70%; /* Center card wrapper */
+}
+
+/* Intro Screen Styled as an Envelope */
+.intro-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    position: fixed; /* Make the intro screen take full space */
+    background:  /* Light envelope color */
+    border: 5px solid #000; /* Black border for the envelope */
+    border-radius: 15px; /* Rounded corners for the envelope */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 10; /* Ensure it's on top */
+}
+
+.envelope {
+    position: relative;
+    padding: 40px;
+    background: white; /* White inner envelope */
+    width: 300px; /* Fixed width for envelope */
+    text-align: center;
+    border: 2px solid #C0C0C0; /* Light gray border for inner */
+    border-radius: 10px; /* Rounded corners */
+}
+
+/* Intro Title and Button */
+.intro-title {
+    font-size: 2em;
+    color: #FF0000; /* Spider-Man red */
+    margin-bottom: 20px;
+}
+
+.open-btn {
+    background-color: #FF0000; /* Spider-Man red */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.open-btn:hover {
+    background-color: #FFD700; /* Change to gold on hover */
+}
+
+/* Sticky Header */
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 0, 0, 0.8); /* Sticky header background */
+    color: white;
+    padding: 15px;
+    text-align: center;
+    z-index: 10; /* Keep above other content */
+}
+
+/* Invitation card hidden initially */
+.hidden {
+    display: none;
+}
+
+/* Enlarged Invitation Card with transparency */
+.card {
+    width: 90%;
+    max-width: 800px; /* Increased max width for larger tables */
+    background: rgba(255, 255, 255, 0.9); /* More opaque for visibility */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    position: relative;
+    color: black; /* Dark text for contrast */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Info Tables Styling */
+.info-table {
+    background: rgba(255, 255, 255, 0.6); /* Increased transparency */
+    border: 2px solid #C0C0C0; /* Light gray border */
+    border-radius: 10px;
+    padding: 30px; /* Increased padding for better spacing */
+    margin-bottom: 30px; /* Increased space between tables */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Full width for tables */
+}
+
+/* Specific styles for the first table to make it stand out */
+.party-info {
+    height: 400px; /* Increase the height of the first table */
+}
+
+/* General Title Styles */
+.info-table h2 {
+    margin-bottom: 15px;
+}
+
+/* Save Event Button */
+.save-event {
+    padding: 10px 15px;
+    background-color: #007bff; /* Blue for save event */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.save-event:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Contact Icons */
+.contact-icons {
+    margin-top: 15px;
+}
+
+.contact-icons a {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #333;
+}
+
+/* Social Media Icons */
+.social-media-table {
+    text-align: center;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons .icon {
+    font-size: 2em;
+    margin: 0 10px;
+    color: #333;
+}
+
+/* Footer with additional info */
+.card-footer {
+    background-color: rgba(255, 0, 0, 0.7); /* Make footer semi-transparent */
+    padding: 10px;
+    border-radius: 0 0 15px 15px;
+    color: white;
+}
+
+.card-footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .envelope {
+        width: 80%; /* Responsive envelope width */
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .card-header h1 {
+        font-size: 2em;
+    }
+
+    .card-body p {
+        font-size: 1.1em;
+    }
+
+    .card-icons i {
+        font-size: 1.8em;
+    }
+
+    .card-icons span {
+        font-size: 0.9em;
+    }
+
+    .black-bar {
+        display: none; /* Hide black bars on smaller screens */
+    }
+}
